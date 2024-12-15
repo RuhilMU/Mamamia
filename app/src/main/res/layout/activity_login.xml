@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".LoginActivity">
+
+    <!-- Login -->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:cardCornerRadius="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="35dp"
+        android:src="@drawable/logo"/>
+
+    <!-- Input Username -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/text_light"
+        android:layout_marginBottom="16dp"
+        >
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:padding="16dp"
+        android:background="@drawable/edittext"
+        android:drawableStart="@drawable/ic_user"
+        android:shadowDy="@integer/material_motion_duration_medium_2"
+        android:textColorHint="@color/text_light"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/poppins"
+        android:drawablePadding="10dp"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Input Password -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/text_light"
+        android:layout_marginBottom="25dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textColor="@color/black"
+            android:shadowColor="@color/black"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:drawableStart="@drawable/ic_password"
+            android:shadowDy="@integer/material_motion_duration_medium_2"
+            android:background="@drawable/edittext"
+            android:textColorHint="@color/text_light"
+            android:includeFontPadding="false"
+            android:drawablePadding="13dp"
+            android:fontFamily="@font/poppins"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Login Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext"
+        android:backgroundTint="@color/primary"
+        android:padding="10dp"
+        android:text="Login"
+        android:textSize="18dp"
+        android:includeFontPadding="false"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:fontFamily="@font/aclonica"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_password" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="cursive"
+        android:text="© Mamamià Resep"
+        android:textColor="@color/text_light"
+        android:textSize="20sp"
+        android:textStyle="italic"/>
+
+</LinearLayout>
